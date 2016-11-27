@@ -406,6 +406,14 @@ public class NVActivityIndicatorView: NSView {
         return CGSize(width: bounds.width, height: bounds.height)
     }
     
+    
+    // Fix flipped animation.
+    override public var isFlipped: Bool {
+        get {
+            return true
+        }
+    }
+    
     /**
      Start animating.
      */

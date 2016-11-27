@@ -43,7 +43,7 @@ class NVActivityIndicatorAnimationBallRotateChase: NVActivityIndicatorAnimationD
         positionAnimation.duration = duration
         positionAnimation.repeatCount = HUGE
         let path = NSBezierPath()
-        path.appendArc(withCenter: CGPoint(x: x, y: y), radius: size.width / 2, startAngle: 3 * CGFloat(M_PI) * 0.5, endAngle: 3 * CGFloat(M_PI) * 0.5 + 2 * CGFloat(M_PI), clockwise: true)
+        path.appendArc(withCenter: CGPoint(x: x, y: y), radius: size.width / 2, startAngle: 270, endAngle: 269.9, clockwise: false)
         positionAnimation.path = path.cgPath
         
         // Aniamtion

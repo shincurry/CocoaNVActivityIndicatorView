@@ -120,11 +120,10 @@ public class NVActivityIndicatorPresenter {
         guard let view = parentView else {
             return
         }
-        let activityContainer: NSView = NSView(frame: view.bounds)
+        let activityContainer = NSView(frame: view.bounds)
         activityContainer.wantsLayer = true
         activityContainer.layer?.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
-//        activityContainer.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-//        activityContainer.restorationIdentifier = restorationIdentifier
+
         let actualSize = activityData.size
         
         var position = CGPoint()
@@ -138,24 +137,20 @@ public class NVActivityIndicatorPresenter {
             color: activityData.color,
             padding: activityData.padding)
         
-
         activityIndicatorView.startAnimating()
         activityContainer.addSubview(activityIndicatorView)
         
         let width = activityContainer.frame.size.width / 3
         
         position.x = (view.bounds.size.width - width) / 2
-        position.y = position.y - 40
+        position.y = position.y + 40
         if let message = activityData.message , !message.isEmpty {
             let label = NSTextField(frame: CGRect(x: position.x, y: position.y, width: width, height: 30))
             label.isBezeled = false
             label.drawsBackground = false
             label.isEditable = false
             label.isSelectable = false
-            
-//            label.center = CGPoint(
-//                x: activityIndicatorView.center.x,
-//                y: activityIndicatorView.center.y + actualSize.height)
+
             label.alignment = .center
             label.stringValue = message
             label.font = NSFont.boldSystemFont(ofSize: 20)
