@@ -163,7 +163,7 @@ public class NVActivityIndicatorPresenter {
     }
     
     private func hide() {
-        if let view = parentView?.subviews.last?.subviews.first as? NVActivityIndicatorView {
+        if let _ = parentView?.subviews.last?.subviews.first as? NVActivityIndicatorView {
             parentView?.subviews.last?.removeFromSuperview()
         }
         

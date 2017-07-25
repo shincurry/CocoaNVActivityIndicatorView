@@ -57,8 +57,8 @@ enum NVActivityIndicatorShape {
                         endAngle: 135,
                         clockwise: false)
             path.move(
-                to: CGPoint(x: size.width / 2 + (size.width / 2) * CGFloat(cos(5 * M_PI_4)),
-                            y: size.height / 2 + (size.height / 2) * CGFloat(sin(5 * M_PI_4)))
+                to: CGPoint(x: size.width / 2 + (size.width / 2) * CGFloat(cos(5 * Double.pi / 4)),
+                            y: size.height / 2 + (size.height / 2) * CGFloat(sin(5 * Double.pi / 4)))
             )
 
             path.appendArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
@@ -76,8 +76,8 @@ enum NVActivityIndicatorShape {
                         endAngle: 225,
                         clockwise: false)
             path.move(
-                to: CGPoint(x: size.width / 2 + size.width / 2 * CGFloat(cos(7 * M_PI_4)),
-                            y: size.height / 2 + size.height / 2 * CGFloat(sin(7 * M_PI_4)))
+                to: CGPoint(x: size.width / 2 + size.width / 2 * CGFloat(cos(7 * Double.pi / 4)),
+                            y: size.height / 2 + size.height / 2 * CGFloat(sin(7 * Double.pi / 4)))
             )
             path.appendArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
                         radius: size.width / 2,

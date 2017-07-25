@@ -366,7 +366,6 @@ public class NVActivityIndicatorView: NSView {
      */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//        BackgroundColor = NSColor.clear
         wantsLayer = true
         isHidden = true
     }

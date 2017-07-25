@@ -50,7 +50,7 @@ class ViewController: NSViewController, NVActivityIndicatorViewable {
             let button = NSButton(frame: frame)
             button.title = ""
             button.tag = $0
-            button.bezelStyle = NSBezelStyle.regularSquare
+            button.bezelStyle = NSButton.BezelStyle.regularSquare
             button.isBordered = false
             button.target = self
             button.action = #selector(buttonTapped(_:))
@@ -60,7 +60,7 @@ class ViewController: NSViewController, NVActivityIndicatorViewable {
         
     }
 
-    func buttonTapped(_ sender: NSButton) {
+    @objc func buttonTapped(_ sender: NSButton) {
         let size = CGSize(width: 40, height: 40)
         
         startAnimating(view, size: size, message: "Loading...", type: NVActivityIndicatorType(rawValue: sender.tag)!)
@@ -68,7 +68,7 @@ class ViewController: NSViewController, NVActivityIndicatorViewable {
                 with: nil,
                 afterDelay: 2.5)
     }
-    func delayedStopActivity() {
+    @objc func delayedStopActivity() {
         stopAnimating()
     }
 
